@@ -161,7 +161,7 @@ class Kernel
             $instance = new $className($params[0], $params[1], $params[2]);
         } else {
             $class = new \ReflectionClass($className);
-            $instance = $class->newInstanceArgs($args);
+            $instance = $class->newInstanceArgs($params);
         }
         
         return $this->setInstance($instanceHash, $instance);
